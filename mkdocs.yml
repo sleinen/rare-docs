@@ -1,0 +1,110 @@
+site_name: RARE documentation
+nav:
+  - Home: index.md
+  - References:
+     - All features in one page: 'guides/reference/index.md'
+     - Features category: 'guides/reference/tabbed.md'
+     - Dataplane: 'guides/reference/dataplane.md'
+     - Interoperability: 'guides/reference/interoperability.md'
+  - Installation:
+    - Overview: 'guides/installation/index.md'
+    - TOFINO P4 switch:
+      - RARE HCL: 'guides/installation/wedge100bf32/rare-hcl.md'
+      - RARE NOS install: 'guides/installation/wedge100bf32/onie-nos-install.md'
+      - Interfaces configuration: 'guides/installation/wedge100bf32/interface.md'
+      - Software operation CLI: 'guides/installation/wedge100bf32/rare-nos-lcm-cli.md'
+      - RARE NOS update: 'guides/installation/wedge100bf32/rare-nos-upgrade.md'
+      - RARE NOS experimental: 'guides/installation/wedge100bf32/rare-nos-exp-upgrade.md'
+      - RARE NOS switch profile: 'guides/installation/wedge100bf32/rare-nos-switch-profile.md'
+  - Cookbook:
+      - Basics: 'guides/recipes/basics.md'
+      - Bridge and VRF: 'guides/recipes/vrf.md'
+      - Hello freeRtr !: 'guides/getting-started/001-hello-world.md'
+      - Topology example: 'guides/getting-started/002-topology-example.md'
+      - Unleash freeRtr !: 'guides/getting-started/003-unleash.md'
+      - Intra domain routing: 'guides/getting-started/004-igp.md'
+      - MPLS forwarding core: 'guides/getting-started/005-mpls.md'
+      - iBGP: 'guides/getting-started/006-ibgp.md'
+      - Polka: 'guides/getting-started/007-polka.md'
+  - Code of conduct: conduct.md
+  - License: license.md
+  - Contacts: contacts.md
+  - About: about.md
+
+site_author: Frederic LOUI
+site_description: RARE documentation
+repo_name: rare-freertr/freertr
+repo_url: https://github.com/frederic-loui/freertr
+site_url: https://docs.rare.geant.org
+
+theme:
+  logo: 'img/rare-icon.png'
+  favicon: 'img/favicon.ico'
+  name: 'material'
+  custom_dir: docs/overrides
+  features:
+    - content.code.copy
+  palette:
+    scheme: slate
+    primary: 'green'
+    accent: 'light green'
+    include_search_page: false
+    search_index_only: true
+  icon:
+    repo: fontawesome/brands/github 
+
+extra_css:
+  - 'css/extra.css'
+
+copyright: > 
+  <img src="/img/geant_logo_white.png">
+  <img src="/img/eu_logo.png"/><br>
+  <a href="#__consent">Change cookie settings</a>
+extra:
+  generator: true
+  search:
+    language: 'en'
+    tokenizer: '[\s\-\.]+'
+  analytics:
+    provider: google
+    property: G-J5GQXX6N6K 
+  consent:
+    title: Cookie Consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+
+
+markdown_extensions:
+  - pymdownx.snippets:
+        base_path: ['docs/guides/reference/snippets','.']
+        check_paths: true
+  - pymdownx.highlight:
+        linenums: false
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+        alternate_style: true
+  - admonition
+  - codehilite
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - tables
